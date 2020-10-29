@@ -1,21 +1,4 @@
 ---
-# Default values for vpn.
-# This is a YAML-formatted file.
-# Declare variables to be passed into your templates.
-
-registry: docker.io
-org: networkservicemesh
-tag: master
-pullPolicy: IfNotPresent
-
-global:
-  # set to true to enable Jaeger tracing for NSM components
-  JaegerTracing: false
-root@corddev4:~/networkservicemesh/deployments/helm/example# cd templates/
-root@corddev4:~/networkservicemesh/deployments/helm/example/templates# ls
-example.yaml  firewall.tpl  iperf-client.tpl  iperf-server.tpl
-root@corddev4:~/networkservicemesh/deployments/helm/example/templates# cat firewall.tpl
----
 apiVersion: apps/v1
 kind: Deployment
 spec:
