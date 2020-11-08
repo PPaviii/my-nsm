@@ -12,7 +12,7 @@ spec:
       route:
         - destination:
           destinationSelector:
-            app: ns-server
+            app: nsm-server
     - match:
       route:
         - destination:
