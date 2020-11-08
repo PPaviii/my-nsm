@@ -4,13 +4,13 @@ kind: Deployment
 spec:
   selector:
     matchLabels:
-      networkservicemesh.io/app: "iperf-server"
+      networkservicemesh.io/app: "nsm-server"
       networkservicemesh.io/impl: "example"
   replicas: 1
   template:
     metadata:
       labels:
-        networkservicemesh.io/app: "iperf-server"
+        networkservicemesh.io/app: "nsm-server"
         networkservicemesh.io/impl: "example"
     spec:
       serviceAccount: nse-acc
@@ -40,5 +40,5 @@ spec:
             protocol: TCP
       terminationGracePeriodSeconds: 0
 metadata:
-  name: iperf-server
+  name: nsm-server
   namespace: default
